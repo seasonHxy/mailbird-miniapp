@@ -1,0 +1,52 @@
+<view class="page" wx:if="{{scene}}">
+  <view class="hint">请填写以下信息，AI 将为你生成邮件</view>
+
+  <view class="form card">
+    <view wx:for="{{scene.fields}}" wx:key="key" class="field">
+      <view class="label">
+        {{item.label}}<text wx:if="{{item.required}}" class="req"> *</text>
+      </view>
+      <input
+        wx:if="{{item.type === 'input'}}"
+        class="input"
+        placeholder="{{item.placeholder}}"
+        placeholder-class="ph"
+        data-key="{{item.key}}"
+        value="{{formData[item.key]}}"
+        bindinput="onInput"
+      />
+      <textarea
+        wx:else
+        class="textarea"
+        placeholder="{{item.placeholder}}"
+        placeholder-class="ph"
+        data-key="{{item.key}}"
+        value="{{formData[item.key]}}"
+        bindinput="onInput"
+        auto-height
+      />
+    </view>
+
+    <view class="field">
+      <view class="label">语气选择 <text class="req">*</text></view>
+      <view class="tone-row">
+        <view
+          wx:for="{{tones}}"
+          wx:key="value"
+          class="tone {{formData.tone === item.value ? 'tone-active' : ''}}"
+          bind:tap="onToneTap"
+          data-value="{{item.value}}"
+        >{{item.label}}</view>
+      </view>
+    </view>
+
+    <view class="field switch-row">
+      <view class="label">生成英文邮件</view>
+      <switch checked="{{formData.needEnglish}}" color="#4F63E6" bindchange="onEnglishChange"/>
+    </view>
+  </view>
+
+  <view class="submit btn-primary {{canSubmit ? '' : 'disabled'}}" hover-class="btn-hover" bind:tap="onSubmit">
+    一键生成邮件
+  </view>
+</view>

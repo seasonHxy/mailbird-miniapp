@@ -1,0 +1,21 @@
+<view class="page">
+  <view class="quota card">
+    <view class="quota-num">{{remaining}}<text class="quota-total"> / {{total}}</text></view>
+    <view class="quota-label">今日剩余免费次数</view>
+  </view>
+
+  <view class="vip card" hover-class="btn-hover" bind:tap="onVip">
+    <view class="vip-info">
+      <view class="vip-title">👑 开通会员</view>
+      <view class="vip-desc">无限生成 · 高级模板 · 英文增强</view>
+    </view>
+    <view class="vip-price">¥19.9/月</view>
+  </view>
+
+  <view class="menu card">
+    <view class="menu-item" hover-class="btn-hover" bind:tap="onClear">🗑️ 清空历史记录</view>
+    <view class="menu-item" hover-class="btn-hover" bind:tap="onFeedback">💬 意见反馈</view>
+  </view>
+
+  <view class="footer">Mailbird 邮件助手 · MVP v0.1</view>
+</view>

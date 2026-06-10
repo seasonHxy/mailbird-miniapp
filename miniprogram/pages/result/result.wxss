@@ -1,0 +1,23 @@
+.page { padding: 32rpx; }
+.loading { text-align: center; padding: 120rpx 0; }
+.loading-icon { font-size: 64rpx; }
+.loading-text { font-size: 28rpx; color: #6b7080; margin-top: 20rpx; }
+
+.status { margin-bottom: 20rpx; font-size: 26rpx; }
+.status-ok { color: #1FA06B; font-weight: 600; }
+.status-mock { color: #d97b29; font-size: 22rpx; margin-left: 12rpx; }
+
+.mail {}
+.mail-label { font-size: 22rpx; color: #9aa0b5; margin-bottom: 10rpx; }
+.mail-title { font-size: 32rpx; font-weight: 700; }
+.mail-divider { height: 2rpx; background: #f0f1f5; margin: 24rpx 0; }
+.mail-content { font-size: 28rpx; line-height: 1.7; white-space: pre-wrap; word-break: break-all; }
+
+.actions { display: flex; gap: 20rpx; margin-top: 32rpx; }
+.action-btn {
+  flex: 1; text-align: center; font-size: 28rpx;
+  background: #fff; color: #4F63E6;
+  padding: 22rpx 0; border-radius: 100rpx;
+  border: 2rpx solid #d9defa;
+}
+.saved-tip { text-align: center; font-size: 22rpx; color: #9aa0b5; margin-top: 24rpx; }

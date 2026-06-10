@@ -1,0 +1,31 @@
+<view class="page">
+  <block wx:if="{{loading}}">
+    <view class="loading card">
+      <view class="loading-icon">✨</view>
+      <view class="loading-text">AI 正在为你撰写邮件…</view>
+    </view>
+  </block>
+
+  <block wx:else>
+    <view class="status">
+      <text class="status-ok">✓ 邮件已生成</text>
+      <text wx:if="{{via === 'mock'}}" class="status-mock">（本地模板，连接后端可获得 AI 质量）</text>
+    </view>
+
+    <view class="mail card">
+      <view class="mail-label">主题（Subject）</view>
+      <view class="mail-title">{{title}}</view>
+      <view class="mail-divider"></view>
+      <view class="mail-label">邮件正文</view>
+      <text class="mail-content" user-select>{{content}}</text>
+    </view>
+
+    <view class="actions">
+      <view class="action-btn" hover-class="btn-hover" bind:tap="onCopy">📋 复制</view>
+      <view class="action-btn" hover-class="btn-hover" bind:tap="onRewrite">✏️ 改写</view>
+      <view wx:if="{{mode !== 'view'}}" class="action-btn" hover-class="btn-hover" bind:tap="onRegenerate">🔄 重新生成</view>
+    </view>
+
+    <view wx:if="{{saved}}" class="saved-tip">已自动保存到「我的邮件」</view>
+  </block>
+</view>

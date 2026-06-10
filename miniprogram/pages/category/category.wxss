@@ -1,0 +1,12 @@
+.page { padding: 32rpx; }
+.scene-list { display: flex; flex-direction: column; gap: 20rpx; }
+.scene-card { display: flex; align-items: center; gap: 24rpx; }
+.scene-icon {
+  width: 88rpx; height: 88rpx; border-radius: 20rpx;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 44rpx; flex-shrink: 0;
+}
+.scene-info { flex: 1; }
+.scene-name { font-size: 30rpx; font-weight: 600; }
+.scene-desc { font-size: 24rpx; color: #9aa0b5; margin-top: 6rpx; }
+.scene-arrow { font-size: 40rpx; color: #c3c7d4; }

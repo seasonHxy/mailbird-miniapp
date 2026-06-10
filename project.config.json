@@ -1,0 +1,21 @@
+{
+  "description": "Mailbird 邮件助手 - 场景化 AI 邮件生成小程序",
+  "miniprogramRoot": "miniprogram/",
+  "compileType": "miniprogram",
+  "libVersion": "3.0.0",
+  "appid": "touristappid",
+  "projectname": "mailbird-miniapp",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  },
+  "packOptions": {
+    "ignore": [
+      { "value": "server", "type": "folder" },
+      { "value": "README.md", "type": "file" }
+    ]
+  }
+}

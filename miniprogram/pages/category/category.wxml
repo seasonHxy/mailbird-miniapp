@@ -1,0 +1,19 @@
+<view class="page" wx:if="{{category}}">
+  <view class="scene-list">
+    <view
+      wx:for="{{category.scenes}}"
+      wx:key="id"
+      class="scene-card card"
+      hover-class="btn-hover"
+      bind:tap="onTapScene"
+      data-id="{{item.id}}"
+    >
+      <view class="scene-icon" style="background:{{category.bg}}">{{item.icon}}</view>
+      <view class="scene-info">
+        <view class="scene-name">{{item.name}}</view>
+        <view class="scene-desc">{{item.desc}}</view>
+      </view>
+      <view class="scene-arrow">›</view>
+    </view>
+  </view>
+</view>

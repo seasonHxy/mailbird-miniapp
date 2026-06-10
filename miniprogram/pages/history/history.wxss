@@ -1,0 +1,21 @@
+.page { padding: 32rpx; }
+.search { margin-bottom: 24rpx; }
+.search-input { background: #fff; border-radius: 100rpx; padding: 18rpx 32rpx; font-size: 28rpx; }
+.ph { color: #b6bac8; }
+
+.list { display: flex; flex-direction: column; gap: 20rpx; }
+.item { position: relative; }
+.item-head { display: flex; justify-content: space-between; margin-bottom: 12rpx; }
+.item-scene { font-size: 24rpx; color: #4F63E6; font-weight: 600; }
+.item-date { font-size: 22rpx; color: #b6bac8; }
+.item-title { font-size: 30rpx; font-weight: 600; }
+.item-preview {
+  font-size: 24rpx; color: #9aa0b5; margin-top: 8rpx;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.item-del { position: absolute; right: 28rpx; bottom: 20rpx; font-size: 22rpx; color: #c3c7d4; }
+
+.empty { text-align: center; padding-top: 160rpx; }
+.empty-icon { font-size: 88rpx; }
+.empty-text { font-size: 30rpx; font-weight: 600; margin-top: 24rpx; }
+.empty-sub { font-size: 24rpx; color: #9aa0b5; margin-top: 10rpx; }

@@ -1,0 +1,26 @@
+page {
+  background: #F5F6FA;
+  font-size: 28rpx;
+  color: #1f2330;
+}
+
+/* 通用卡片 */
+.card {
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 28rpx;
+  box-shadow: 0 4rpx 20rpx rgba(40, 50, 120, 0.05);
+}
+
+/* 主按钮 */
+.btn-primary {
+  background: #4F63E6;
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 600;
+  text-align: center;
+  padding: 24rpx 0;
+  border-radius: 100rpx;
+}
+.btn-primary.disabled { opacity: 0.5; }
+.btn-hover { opacity: 0.8; }

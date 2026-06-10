@@ -1,0 +1,20 @@
+.page { padding: 32rpx; display: flex; flex-direction: column; gap: 24rpx; }
+.quota { text-align: center; padding: 48rpx 0; }
+.quota-num { font-size: 72rpx; font-weight: 800; color: #4F63E6; }
+.quota-total { font-size: 32rpx; color: #b6bac8; font-weight: 400; }
+.quota-label { font-size: 26rpx; color: #9aa0b5; margin-top: 8rpx; }
+
+.vip {
+  display: flex; align-items: center; justify-content: space-between;
+  background: linear-gradient(135deg, #2b2b40, #44446a);
+  color: #f5d98f;
+}
+.vip-title { font-size: 32rpx; font-weight: 700; }
+.vip-desc { font-size: 22rpx; color: #cfc6a8; margin-top: 8rpx; }
+.vip-price { font-size: 32rpx; font-weight: 800; }
+
+.menu { padding: 0; }
+.menu-item { padding: 30rpx 28rpx; font-size: 28rpx; border-bottom: 2rpx solid #f5f6fa; }
+.menu-item:last-child { border-bottom: none; }
+
+.footer { text-align: center; font-size: 22rpx; color: #c3c7d4; margin-top: 24rpx; }

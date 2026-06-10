@@ -1,0 +1,46 @@
+<view class="page">
+  <view class="banner">
+    <view class="banner-title">专业邮件 秒速生成</view>
+    <view class="banner-sub">场景化模板 · 一键生成 · 让沟通更高效</view>
+  </view>
+
+  <view class="section-title">请选择邮件场景</view>
+  <view class="cat-list">
+    <view
+      wx:for="{{categories}}"
+      wx:key="id"
+      class="cat-card"
+      style="background:{{item.bg}}"
+      hover-class="btn-hover"
+      bind:tap="onTapCategory"
+      data-id="{{item.id}}"
+    >
+      <view class="cat-icon">{{item.icon}}</view>
+      <view class="cat-info">
+        <view class="cat-name" style="color:{{item.color}}">{{item.name}}</view>
+        <view class="cat-desc">{{item.desc}}</view>
+      </view>
+      <view class="cat-arrow" style="color:{{item.color}}">→</view>
+    </view>
+  </view>
+
+  <block wx:if="{{recent.length > 0}}">
+    <view class="section-title">最近生成</view>
+    <view class="recent-list">
+      <view
+        wx:for="{{recent}}"
+        wx:key="id"
+        class="recent-item card"
+        hover-class="btn-hover"
+        bind:tap="onTapRecent"
+        data-id="{{item.id}}"
+      >
+        <view class="recent-icon">{{item.sceneIcon}}</view>
+        <view class="recent-body">
+          <view class="recent-title">{{item.title}}</view>
+          <view class="recent-meta">{{item.sceneName}} · {{item.createdAt}}</view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

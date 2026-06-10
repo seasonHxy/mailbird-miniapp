@@ -1,0 +1,32 @@
+<view class="page">
+  <view class="search">
+    <input class="search-input" placeholder="搜索邮件" placeholder-class="ph" bindinput="onSearch" value="{{keyword}}"/>
+  </view>
+
+  <block wx:if="{{records.length > 0}}">
+    <view class="list">
+      <view
+        wx:for="{{records}}"
+        wx:key="id"
+        class="item card"
+        hover-class="btn-hover"
+        bind:tap="onTapItem"
+        data-id="{{item.id}}"
+      >
+        <view class="item-head">
+          <text class="item-scene">{{item.sceneIcon}} {{item.sceneName}}</text>
+          <text class="item-date">{{item.createdAt}}</text>
+        </view>
+        <view class="item-title">{{item.title}}</view>
+        <view class="item-preview">{{item.content}}</view>
+        <view class="item-del" catch:tap="onDelete" data-id="{{item.id}}">删除</view>
+      </view>
+    </view>
+  </block>
+
+  <view wx:else class="empty">
+    <view class="empty-icon">📭</view>
+    <view class="empty-text">还没有生成过邮件</view>
+    <view class="empty-sub">去首页选择一个场景试试吧</view>
+  </view>
+</view>
